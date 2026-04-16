@@ -1,0 +1,249 @@
+/* Stat Cards */
+.analytics-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.analytics-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+}
+
+.analytics-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.analytics-card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.analytics-card-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.analytics-card-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Grid */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.analytics-panel {
+  padding: var(--space-lg);
+}
+
+.panel-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+/* Completion Ring */
+.ring-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.ring-svg {
+  width: 140px;
+  height: 140px;
+}
+
+.ring-progress {
+  transition: stroke-dasharray 1s ease;
+}
+
+.ring-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ring-pct {
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ring-sub {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Bar Chart */
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.bar-label {
+  width: 60px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+.bar-track {
+  flex: 1;
+  height: 10px;
+  background: var(--bg-input);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  min-width: 2px;
+}
+
+.bar-count {
+  width: 30px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+/* Category Chart */
+.cat-chart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.cat-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cat-row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cat-row-name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.cat-row-pct {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+.cat-row-done {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+/* Recent Activity */
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.recent-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-base);
+}
+
+.recent-item:hover {
+  background: var(--bg-input);
+}
+
+.recent-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-circle);
+  background: var(--warning);
+  flex-shrink: 0;
+}
+
+.recent-dot.done {
+  background: var(--success);
+}
+
+.recent-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.recent-title {
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.recent-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .analytics-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .analytics-cards {
+    grid-template-columns: 1fr;
+  }
+}

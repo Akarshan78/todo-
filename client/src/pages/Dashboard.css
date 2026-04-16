@@ -1,0 +1,58 @@
+.dashboard-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.dashboard-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.dashboard-subtitle {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.dashboard-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.task-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-add-btn span {
+  display: inline;
+}
+
+@media (min-width: 769px) {
+  .mobile-add-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 1.25rem;
+  }
+}
